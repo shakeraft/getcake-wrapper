@@ -3,14 +3,15 @@
 import xmltodict
 import requests
 from datetime import datetime, timedelta
-# AWS Instance runs on 3.8.5. ZoneInfo no available until 3.9.0. This is a workaround.
+# AWS Instance runs on 3.8.5. ZoneInfo isn't available until 3.9.0. This is a workaround.
 try:
     from zoneinfo import ZoneInfo
 except ImportError:
     from backports.zoneinfo import ZoneInfo
 
-tz = ZoneInfo('America/New_York')
 
+# Place your Cake Domain, API Key, and primary timezone here
+tz = ZoneInfo('America/New_York')
 DOMAIN = ''
 API_KEY = ''
 
